@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <title>Claude Skills 一頁式介紹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --text: #1f2933;
+        --accent: #5c6cff;
+        --accent-dark: #434ed0;
+        --muted: #52606d;
+        --card: #ffffff;
+        --border: #d9e2ec;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Noto Sans TC", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        padding: 80px 24px 48px;
+        background: linear-gradient(160deg, rgba(92, 108, 255, 0.95), rgba(67, 78, 208, 0.9));
+        color: #fff;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: clamp(2.4rem, 5vw, 3.2rem);
+        letter-spacing: 0.04em;
+      }
+
+      header p {
+        max-width: 640px;
+        margin: 16px auto 0;
+        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .container {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 48px 24px 96px;
+      }
+
+      .section {
+        margin-bottom: 64px;
+      }
+
+      .card-grid {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 24px;
+        border: 1px solid var(--border);
+        box-shadow: 0 14px 45px rgba(15, 23, 42, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
+      }
+
+      h2 {
+        font-size: 1.75rem;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin-top: 0;
+      }
+
+      p {
+        margin: 12px 0;
+        color: var(--muted);
+      }
+
+      ul {
+        padding-left: 20px;
+        color: var(--muted);
+      }
+
+      .highlight {
+        background: rgba(92, 108, 255, 0.08);
+        border-left: 4px solid var(--accent);
+        padding: 18px 20px;
+        border-radius: 12px;
+        margin-top: 24px;
+        color: var(--text);
+      }
+
+      .steps {
+        counter-reset: step;
+      }
+
+      .steps li {
+        list-style: none;
+        margin-bottom: 16px;
+        padding-left: 48px;
+        position: relative;
+      }
+
+      .steps li::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--accent);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+      }
+
+      footer {
+        text-align: center;
+        padding: 32px 24px 48px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding: 64px 20px 40px;
+        }
+        .container {
+          padding: 40px 20px 72px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Claude Skills：打造專屬 AI 助理的最快途徑</h1>
+      <p>
+        這份一頁式介紹整理自 Anthropic 官方公告，說明如何運用 Claude Skills 將精準指令、
+        程式工具與團隊知識封裝成可分享的工作流程，加速部署客製化 AI 助理。
+      </p>
+    </header>
+    <main class="container">
+      <section class="section">
+        <h2>為什麼選擇 Skills？</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>模組化知識包</h3>
+            <p>
+              將最佳實踐、流程腳本與品牌語氣寫成技能，一鍵重用於多個對話或專案，
+              避免每次重新教學 Claude。
+            </p>
+          </article>
+          <article class="card">
+            <h3>深度整合資料</h3>
+            <p>
+              Skills 支援連結企業文件、API 或資料庫，確保回答引用最新權威來源並提供可追溯的參考資訊。
+            </p>
+          </article>
+          <article class="card">
+            <h3>分享與治理</h3>
+            <p>
+              可將技能設為私有、團隊共用或公開給社群，搭配權限管理與審核流程，維持治理與安全。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>核心能力一覽</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>即插即用的操作面板</h3>
+            <p>
+              透過圖形化介面設定輸入欄位、動態上下文及多步驟流程，替不同使用情境建立專屬面板。
+            </p>
+          </article>
+          <article class="card">
+            <h3>API 與自動化工作流</h3>
+            <p>
+              利用 REST API 或 Zapier、Make 等自動化平台呼叫技能，將 Claude 納入既有業務系統。
+            </p>
+          </article>
+          <article class="card">
+            <h3>安全與合規</h3>
+            <p>
+              Anthropic 採用分層權限、細粒度日誌與資料控制機制，讓企業能在保護資料的前提下擴散使用。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>打造第一個技能：三步驟</h2>
+        <ol class="steps">
+          <li>
+            在 Claude 中建立新技能，撰寫專注於成果的指令，並指明輸入限制、語氣與輸出格式。
+          </li>
+          <li>
+            上傳支援文件或連結資料來源，使用測試案例驗證引用品質與錯誤處理流程。
+          </li>
+          <li>
+            透過團隊共享或 API 整合將技能送到實際環境，並根據回饋持續調整迭代。
+          </li>
+        </ol>
+        <div class="highlight">
+          <strong>實際案例：</strong> 官方展示了客服回覆生成、研究整理、程式碼審查與教育教案等情境，
+          透過自訂技能大幅降低重複溝通成本並鎖定組織語調。
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>常見問答</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Skills 與自訂指令有何差異？</h3>
+            <p>
+              Skills 可以多個並行、針對不同任務切換，且支援輸入、資料與角色設定的細緻編排，
+              遠比單一自訂指令靈活。
+            </p>
+          </article>
+          <article class="card">
+            <h3>需要額外付費嗎？</h3>
+            <p>
+              Skills 隨 Claude 訂閱提供，依使用的模型與 API 方案計費，無需另購附加元件。
+            </p>
+          </article>
+          <article class="card">
+            <h3>如何掌握版本？</h3>
+            <p>
+              建議在技能描述中紀錄最近更新時間、測試結果與相依資料來源，確保團隊知悉改版內容。
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      根據 Anthropic 官方公告整理 · 最後更新：2025 年 10 月
+    </footer>
+  </body>
+</html>
