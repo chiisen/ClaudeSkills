@@ -18,3 +18,5 @@ openspec init
 依據 https://www.anthropic.com/news/skills 的內容的彙整製作一頁式的介紹說明網頁，並幫我填寫 project.md 與 AGENTS.md 的內容，網頁風格請參考 STYLE.md。
 ```
 
+# 執行專案
+於瀏覽器開啟 docs/index.html。
