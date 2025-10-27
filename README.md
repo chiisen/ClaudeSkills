@@ -1,6 +1,8 @@
 # ClaudeSkills
 Claude Skills
 
+![ClaudeSkills](./images/ClaudeSkills.png)
+
 # OpenSpec 初始化專案
 Node.js >= 20.19.0 - Check your version with node --version
 ```bash
