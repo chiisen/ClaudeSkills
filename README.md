@@ -1,5 +1,5 @@
 # ClaudeSkills
-Claude Skills
+Claude Skills 是 Anthropic 在 Claude 上提供的一種「模組化技能系統」，本質上是一組打包好的「給 AI 用的 SOP＋資源＋程式碼」，讓 Claude 能在需要時自動載入，強化處理特定任務的能力，例如文件處理、資料分析或公司內部專屬流程。
 
 ![ClaudeSkills](./images/ClaudeSkills.png)
 
